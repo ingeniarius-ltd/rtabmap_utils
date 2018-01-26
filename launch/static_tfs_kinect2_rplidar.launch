@@ -1,0 +1,12 @@
+<!-- static TFs between Kinect2 and RPLIDAR A2 Laser -->
+<launch>
+    
+    <!-- Adjust the transformation between your kinect2 and the RPLIDAR laser -->
+    <!-- In a perfect aligned world, rpy would be: "-1.57 0.0 -1.57" -->                        <!-- kinect2_link: red right, green down, blue front -->
+    <node pkg="tf" type="static_transform_publisher" name="static_tf_kinect2_rplidar" args="0.125 0.09 -0.08 -1.5 0.0 -1.34 laser kinect2_link 100" respawn="true"/> <!-- 10Hz-->
+    
+    <!-- DO NOT CHANGE. Align "kinect2_laser_link" with "laser" by inverting the axis of "kinect2_link"-->
+    <node pkg="tf" type="static_transform_publisher" name="static_tf_kinect2_inverted_link" args="0.0 0.0 0.0 1.57 -1.57 0.0 kinect2_link kinect2_laser_link 100" respawn="true"/> <!-- 10Hz-->
+    
+</launch>
+    

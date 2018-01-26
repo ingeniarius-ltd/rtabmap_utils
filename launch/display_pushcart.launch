@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+	<arg name="model" default="$(find rtabmap_utils)/urdf/pushcart.urdf"/>
+        
+	<param name="robot_description" textfile="$(arg model)" />
+	
+	<node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher">
+            <param name="publish_frequency" type="double" value="15.0"/>
+        </node>  
+        
+    <!-- laser to base_link static tf -->
+    <node pkg="tf" type="static_transform_publisher" name="static_tf_base_link" args="-0.3 0.0 -0.425 0.0 0.0 0.0 laser base_link 100" respawn="true"/>
+
+</launch>

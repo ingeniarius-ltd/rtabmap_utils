@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>rtabmap_utils</name>
+  <version>0.0.0</version>
+  <description>The rtabmap_utils package</description>
+
+  <maintainer email="davidbsp@ingeniarius.pt">david</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>rplidar_ros</run_depend>
+  <run_depend>hector_mapping</run_depend>
+  <run_depend>rtabmap_ros</run_depend>
+  <run_depend>urdf</run_depend>
+
+  <export>
+
+  </export>
+</package>

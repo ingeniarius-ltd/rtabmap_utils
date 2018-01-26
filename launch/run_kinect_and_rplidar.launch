@@ -1,0 +1,16 @@
+<!-- Launch Kinect2 and RPLidar A2 with Static TFs-->
+
+<launch>
+
+    <!-- Kinect2 ROS Driver -->
+    <include file="$(find kinect2_bridge)/launch/kinect2_bridge.launch">
+        <arg name="publish_tf" value="true" /> 
+    </include>
+    
+    <!-- RPLIDAR A2 Driver -->
+    <include file="$(find rplidar_ros)/launch/rplidar.launch"/>
+
+    <!-- Needed Static Transforms between the sensors -->
+    <include file="$(find rtabmap_utils)/launch/static_tfs_kinect2_rplidar.launch"/>
+
+</launch>

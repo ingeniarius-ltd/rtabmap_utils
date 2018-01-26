@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot name="pushcart">
+  
+  
+  
+  <!----------------------------------------------------- BASE ------------------------------------------------------------>
+  
+  <link name="base_link" >
+      <visual>      
+	<origin
+        xyz="0.175 0.2 0"
+        rpy="0 0 1.57" />
+	<geometry>
+          <mesh filename="package://rtabmap_utils/pushcart_mesh/pushcart.stl" scale="0.00075 0.00075 0.00075"/> 
+      </geometry>
+      <material name="skin">
+        <color rgba="0.7 0.7 0.7 1.0" />
+      </material>
+    </visual>
+   <!--<collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" /> 
+      <geometry>
+	<mesh filename="package://launch_utils/pushcart_mesh/pushcart.stl" /> 
+      </geometry>
+    </collision>-->
+  </link> 
+  	
+</robot>
