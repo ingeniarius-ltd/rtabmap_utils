@@ -21,4 +21,4 @@ https://www.youtube.com/watch?v=MlrcTyXy5No
 
 You can download the ROS bag dataset with the sensor data of the above experiment at:
 
-https://mega.nz/#F!AuIyiLiI!9d-z68Nq2ocODyENkFbeaA
+https://goo.gl/c4e8BS
